@@ -10,9 +10,11 @@
 		10C2541821F673BF008ECF22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C2541721F673BF008ECF22 /* AppDelegate.swift */; };
 		10C2541A21F673BF008ECF22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C2541921F673BF008ECF22 /* ViewController.swift */; };
 		10C2541D21F673BF008ECF22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10C2541B21F673BF008ECF22 /* Main.storyboard */; };
-		10C2542021F673BF008ECF22 /* ScrollViewController.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10C2541E21F673BF008ECF22 /* ScrollViewController.xcdatamodeld */; };
 		10C2542221F673C0008ECF22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10C2542121F673C0008ECF22 /* Assets.xcassets */; };
 		10C2542521F673C0008ECF22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10C2542321F673C0008ECF22 /* LaunchScreen.storyboard */; };
+		10C2542D21F67AED008ECF22 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C2542C21F67AED008ECF22 /* Logic.swift */; };
+		10FBBE3021F8635000B52819 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FBBE2F21F8635000B52819 /* FirstVC.swift */; };
+		10FBBE3221F8680100B52819 /* PicturesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FBBE3121F8680100B52819 /* PicturesVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +22,12 @@
 		10C2541721F673BF008ECF22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10C2541921F673BF008ECF22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		10C2541C21F673BF008ECF22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		10C2541F21F673BF008ECF22 /* ScrollViewController.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScrollViewController.xcdatamodel; sourceTree = "<group>"; };
 		10C2542121F673C0008ECF22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10C2542421F673C0008ECF22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10C2542621F673C0008ECF22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10C2542C21F67AED008ECF22 /* Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
+		10FBBE2F21F8635000B52819 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
+		10FBBE3121F8680100B52819 /* PicturesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,13 @@
 			children = (
 				10C2541721F673BF008ECF22 /* AppDelegate.swift */,
 				10C2541921F673BF008ECF22 /* ViewController.swift */,
+				10FBBE2F21F8635000B52819 /* FirstVC.swift */,
 				10C2541B21F673BF008ECF22 /* Main.storyboard */,
 				10C2542121F673C0008ECF22 /* Assets.xcassets */,
 				10C2542321F673C0008ECF22 /* LaunchScreen.storyboard */,
 				10C2542621F673C0008ECF22 /* Info.plist */,
-				10C2541E21F673BF008ECF22 /* ScrollViewController.xcdatamodeld */,
+				10C2542C21F67AED008ECF22 /* Logic.swift */,
+				10FBBE3121F8680100B52819 /* PicturesVC.swift */,
 			);
 			path = ScrollViewController;
 			sourceTree = "<group>";
@@ -138,8 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10C2542D21F67AED008ECF22 /* Logic.swift in Sources */,
+				10FBBE3221F8680100B52819 /* PicturesVC.swift in Sources */,
 				10C2541A21F673BF008ECF22 /* ViewController.swift in Sources */,
-				10C2542021F673BF008ECF22 /* ScrollViewController.xcdatamodeld in Sources */,
+				10FBBE3021F8635000B52819 /* FirstVC.swift in Sources */,
 				10C2541821F673BF008ECF22 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,19 +348,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		10C2541E21F673BF008ECF22 /* ScrollViewController.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				10C2541F21F673BF008ECF22 /* ScrollViewController.xcdatamodel */,
-			);
-			currentVersion = 10C2541F21F673BF008ECF22 /* ScrollViewController.xcdatamodel */;
-			path = ScrollViewController.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 10C2540C21F673BE008ECF22 /* Project object */;
 }

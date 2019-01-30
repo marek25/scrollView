@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eh4-KT-fa5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,137 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScrollViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="647" translatesAutoresizingMaskIntoConstraints="NO" id="eIX-FM-mJS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Wf0-UX-wui"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eIX-FM-mJS" secondAttribute="bottom" id="DbE-Js-dp3"/>
+                            <constraint firstItem="eIX-FM-mJS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="WfO-fR-e7F"/>
+                            <constraint firstAttribute="trailing" secondItem="eIX-FM-mJS" secondAttribute="trailing" id="gaE-kN-t67"/>
+                            <constraint firstItem="eIX-FM-mJS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ic4-kT-Qhb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="eIX-FM-mJS" id="Wht-8d-MHR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--FirstVC-->
+        <scene sceneID="lUY-Wz-evJ">
+            <objects>
+                <viewController id="Eh4-KT-fa5" customClass="FirstVC" customModule="ScrollViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M4k-PF-59g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="fTO-HB-5PH">
+                                <rect key="frame" x="16" y="36" width="343" height="174"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1At-i6-dZq">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <color key="backgroundColor" red="0.96862745100000003" green="0.57254901960000004" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="SeflTimer"/>
+                                        <connections>
+                                            <action selector="selfTimer:" destination="Eh4-KT-fa5" eventType="touchUpInside" id="p22-4H-4bA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kj6-Ci-AMI">
+                                        <rect key="frame" x="0.0" y="48" width="343" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Picture1"/>
+                                        <connections>
+                                            <action selector="Picture1:" destination="Eh4-KT-fa5" eventType="touchUpInside" id="iq9-eb-ISM"/>
+                                            <segue destination="XUt-GY-6en" kind="popoverPresentation" identifier="Picture1" popoverAnchorView="kj6-Ci-AMI" id="uWo-gQ-iHX">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DsR-Yc-UAm">
+                                        <rect key="frame" x="0.0" y="96" width="343" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.63148328990000002" blue="0.76345486110000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Picture2"/>
+                                        <connections>
+                                            <action selector="Picture2:" destination="Eh4-KT-fa5" eventType="touchUpInside" id="yBU-FO-fVA"/>
+                                            <segue destination="XUt-GY-6en" kind="popoverPresentation" identifier="Picture2" popoverAnchorView="DsR-Yc-UAm" id="Ybg-TM-uLX">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUD-fn-QjE">
+                                        <rect key="frame" x="0.0" y="144" width="343" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Picture3"/>
+                                        <connections>
+                                            <action selector="Picture3:" destination="Eh4-KT-fa5" eventType="touchUpInside" id="ik0-1p-BtB"/>
+                                            <segue destination="XUt-GY-6en" kind="popoverPresentation" identifier="Picture3" popoverAnchorView="qUD-fn-QjE" id="kUi-5q-Ubf">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6pg-Qw-mdy" firstAttribute="trailing" secondItem="fTO-HB-5PH" secondAttribute="trailing" constant="16" id="Wqi-Mg-Z74"/>
+                            <constraint firstItem="fTO-HB-5PH" firstAttribute="leading" secondItem="6pg-Qw-mdy" secondAttribute="leading" constant="16" id="jWy-tb-fmq"/>
+                            <constraint firstItem="fTO-HB-5PH" firstAttribute="top" secondItem="6pg-Qw-mdy" secondAttribute="top" constant="16" id="nDw-Zp-9gt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6pg-Qw-mdy"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="selfTimer" id="G8Z-1j-Qde"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nMa-HD-a1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-647.20000000000005" y="144.3778110944528"/>
+        </scene>
+        <!--PicturesVC-->
+        <scene sceneID="YLg-or-92v">
+            <objects>
+                <viewController id="XUt-GY-6en" customClass="PicturesVC" customModule="ScrollViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="joH-Br-JHh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="667" translatesAutoresizingMaskIntoConstraints="NO" id="Hk5-5n-rtY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hk5-5n-rtY" firstAttribute="leading" secondItem="joH-Br-JHh" secondAttribute="leading" id="ChV-0W-DXG"/>
+                            <constraint firstItem="Hk5-5n-rtY" firstAttribute="trailing" secondItem="joH-Br-JHh" secondAttribute="trailing" id="QJS-KQ-Zty"/>
+                            <constraint firstItem="Hk5-5n-rtY" firstAttribute="bottom" secondItem="joH-Br-JHh" secondAttribute="bottom" id="meM-Su-Dhf"/>
+                            <constraint firstItem="Hk5-5n-rtY" firstAttribute="top" secondItem="joH-Br-JHh" secondAttribute="top" id="vXO-7E-FPx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SQJ-z1-AdM"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="Hk5-5n-rtY" id="cJj-jB-xa5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nrN-Si-5bZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-247" y="922"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="kUi-5q-Ubf"/>
+    </inferredMetricsTieBreakers>
 </document>
